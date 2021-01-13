@@ -12,7 +12,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag airflow:${{ github.sha }}
     - name: Running tests
-      run: docker run --rm airflow:${{ github.sha }} bash -c "airflow initdb && pytest include/tests"
+      run: docker run --rm airflow:${{ github.sha }} bash -c "airflow initdb "
     - name: Publish to Astronomer.io
       uses: elgohr/Publish-Docker-Github-Action@2.6
       with:
