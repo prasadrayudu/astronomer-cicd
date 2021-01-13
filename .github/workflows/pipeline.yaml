@@ -16,7 +16,7 @@ jobs:
     - name: Publish to Astronomer.io
       uses: elgohr/Publish-Docker-Github-Action@2.6
       with:
-        name: accurate-gravitation-7076/airflow:ci-${{ github.sha }}
+        name: flickering-intensity-0132/airflow:ci-${{ github.sha }}
         username: _
         password: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         registry: registry.gcp0001.us-east4.astronomer.io
