@@ -11,12 +11,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag airflow:${{ github.sha }}
-    #- name: Running tests
+    #- name: Running tests jus to test
     #  run: docker run --rm airflow:${{ github.sha }} bash -c "airflow initdb "
     - name: Publish to Astronomer.io
       uses: elgohr/Publish-Docker-Github-Action@2.6
       with:
-        name: flickering-intensity-0132/airflow:ci-${{ github.sha }}
+        name: scientific-nebula-7241/airflow:ci-${{ github.sha }}
         username: _
         password: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         registry: registry.gcp0001.us-east4.astronomer.io
