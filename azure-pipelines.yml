@@ -7,9 +7,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
  
-variables:
-- group: Variable-Group
-- group: Key-Vault-Group
+#variables:
+#- group: Variable-Group
+#- group: Key-Vault-Group
 steps:
 - script: |
     echo "Building container.."
