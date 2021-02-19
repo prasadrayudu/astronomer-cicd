@@ -8,7 +8,7 @@ pool:
   vmImage: 'ubuntu-latest'
  
 variables:
-  DEPLOYMENT-SERVICE-ACCOUNT-KEY: '6291287e6b9555bb4ad219e83d25a566'
+  DEPLOYMENT-SERVICE-ACCOUNT-KEY: 'ea3e9760e18a96a472f7d90a6f3a5ceb'
   
 #- group: Variable-Group
 #- group: Key-Vault-Group
