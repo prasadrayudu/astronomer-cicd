@@ -27,6 +27,7 @@ stages:
         docker push registry.gcp0001.us-east4.astronomer.io/geocentric-neutron-9870/airflow:$CI_PIPELINE_ID
     variables:
     - group: Variable-Group
+    - group: Key-Vault-Group
 
 
 #steps:
