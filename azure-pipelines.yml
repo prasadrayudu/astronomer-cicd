@@ -7,12 +7,14 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
  
-#variables:
+variables:
+  DEPLOYMENT-SERVICE-ACCOUNT-KEY: '6291287e6b9555bb4ad219e83d25a566'
+  
 #- group: Variable-Group
 #- group: Key-Vault-Group
 steps:
 - script: |
     echo "Building container.."
-    docker build -t registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:$(CI_PIPELINE_ID) .
+    docker build -t registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:latest .
     docker login registry.gcp0001.us-east4.astronomer.io -u _ -p $(DEPLOYMENT-SERVICE-ACCOUNT-KEY)
-    docker push registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:$(CI_PIPELINE_ID)
+    docker push registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:latest
