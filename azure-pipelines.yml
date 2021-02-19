@@ -7,11 +7,11 @@ trigger:
 #pool:
 #  vmImage: 'ubuntu-latest'
  
-#variables:
+variables:
  # DEPLOYMENT-SERVICE-ACCOUNT-KEY: '86ec28f3011c6d97e79dd028cd759bf1'
   
-#- group: Variable-Group
-#- group: Key-Vault-Group
+- group: Variable-Group
+- group: Key-Vault-Group
 
 stages:
 - stage: build
@@ -25,9 +25,9 @@ stages:
         docker build -t registry.gcp0001.us-east4.astronomer.io/geocentric-neutron-9870/airflow:$CI_PIPELINE_ID .
         docker login registry.gcp0001.us-east4.astronomer.io -u _ -p $(DEPLOYMENT-SERVICE-ACCOUNT-KEY)
         docker push registry.gcp0001.us-east4.astronomer.io/geocentric-neutron-9870/airflow:$CI_PIPELINE_ID
-    variables:
-    - group: Variable-Group
-    - group: Key-Vault-Group
+    #variables:
+    #- group: Variable-Group
+    #- group: Key-Vault-Group
 
 
 #steps:
