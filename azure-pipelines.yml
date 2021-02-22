@@ -18,7 +18,7 @@ stages:
     - script: |
         echo "Building container.."
         docker build -t registry.gcp0001.us-east4.astronomer.io/geocentric-neutron-9870/airflow:$CI_PIPELINE_ID .
-        docker login registry.gcp0001.us-east4.astronomer.io -u _ -p $(DEPLOYMENT-SERVICE-ACCOUNT-KEY)
+        docker login registry.gcp0001.us-east4.astronomer.io -u _ -p $(DEPLOYMENT-SERVICE-ACCOUNT-KEY1)
         docker push registry.gcp0001.us-east4.astronomer.io/geocentric-neutron-9870/airflow:$CI_PIPELINE_ID
 
 
