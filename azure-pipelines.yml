@@ -13,7 +13,7 @@ stages:
   jobs:
   - job: run_build
     pool:
-      vmImage: 'Ubuntu-latest'
+      vmImage: 'Linux-latest'
     steps:
     - script: |
         echo "Building container.."
